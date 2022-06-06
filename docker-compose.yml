@@ -1,0 +1,28 @@
+version: '2'
+
+services:
+
+  lieferantenbackend:
+    build:
+      context: ./balena-mioga-lieferanten-backend
+    restart: always
+    ports:
+      - "8080:8080"
+
+
+  mysql:
+    image: mysql
+    command: --default-authentication-plugin=mysql_native_password
+    restart: always
+    environment:
+      MYSQL_ROOT_PASSWORD: password
+      MYSQL_DATABASE: mioga_products_category
+    ports:
+      - "3306:3306"
+
+
+  adminer:
+    image: adminer
+    restart: always
+    ports:
+      - "9090:8080"
