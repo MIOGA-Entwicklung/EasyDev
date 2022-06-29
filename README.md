@@ -21,13 +21,6 @@ cd ( your project directory root)
 docker-compose up 
 ```
 
-```sh
-=> visit "localhost:8080/import" to import all liferanten  
-```
-
-```sh
-=> visit "localhost:8080/zulieferer/all" to check that all liferanten are imported  
-```
 
 
 
